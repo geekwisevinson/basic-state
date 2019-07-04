@@ -1,0 +1,13 @@
+<p>select works!</p>
+
+<div [ngStyle]="{background: bgColor}">
+  {{ selectedUser | json }}
+  <div
+    [ngClass]="{'selected-user': user === selectedUser}"
+
+    *ngFor="let user of usersService.users"
+    (click)="onSelectUser(user)">
+    {{user.name}}
+  </div>
+</div>
+
