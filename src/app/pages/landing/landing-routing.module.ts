@@ -5,7 +5,8 @@ import {LoggedInComponent} from './logged-in/logged-in.component';
 
 const routes: Routes = [
   {path: '', component: LoggedOutComponent},
-  {path: 'dashboard', component: LoggedInComponent}
+  {path: 'dashboard/:id', component: LoggedInComponent},
+  {path: 'dashboard', component: LoggedInComponent},
 ];
 
 @NgModule({

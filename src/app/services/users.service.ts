@@ -16,4 +16,11 @@ export class UsersService {
   onSelectUser(user) {
     this.selectedUser.next(user);
   }
+  public onSelectUserByUsername(username: string) {
+    this.users.forEach( user => {
+      if (user.name.toLowerCase() === username.toLowerCase()) {
+        this.onSelectUser(user);
+      }
+    })
+  }
 }
